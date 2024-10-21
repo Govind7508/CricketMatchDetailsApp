@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".auth.ui.fragment.LoginFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/profile_color_background"
+            tools:ignore="MissingClass">
+
+            <ImageView
+                android:id="@+id/backIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/arrow___left_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profileTitleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_profile"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_35sdp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/backIM"
+               />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileCRD"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                app:cardCornerRadius="250dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:backgroundTint="@color/profile_color_background"
+                android:layout_marginTop="@dimen/_35sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/backIM" >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/profileIV"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/camera"
+               />
+            </androidx.cardview.widget.CardView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/firstNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/firstname"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileCRD" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/firstNameET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:hint="Enter your Name"
+                android:textColorHint="@color/colorTextHintDefault"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nunito_medium" android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/mobile_number_button_selection"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lastNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lastname"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameET" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lastNameET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:hint="Enter your Last Name"
+                android:textColorHint="@color/colorTextHintDefault"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nunito_medium"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/mobile_number_button_selection"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/phoneNumberTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameET" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/phoneNumberET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:hint="Enter your phone number"
+                android:textColorHint="@color/colorTextHintDefault"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nunito_medium"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/mobile_number_button_selection"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneNumberTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationBT"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/welcome_button_selection"
+                android:gravity="center"
+                android:text="@string/pick_location"
+                android:drawableRight="@drawable/location_icn"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nunito_extrabold"
+                android:textSize="@dimen/_14sdp"
+                app:flow_horizontalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneNumberET" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ORTX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:gravity="center"
+                android:text="@string/or"
+                android:drawableRight="@drawable/location_icn"
+                android:textColor="@color/colorTextHintDefault"
+                android:fontFamily="@font/montserrat_extrabold"
+                android:textSize="@dimen/_14sdp"
+                app:flow_horizontalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationBT" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pincodeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_code"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ORTX" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/pincodeET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:inputType="number"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:hint="Enter post code or address"
+                android:textColorHint="@color/colorTextHintDefault"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nunito_medium"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/mobile_number_button_selection"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pincodeTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profileSubmitBT"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/welcome_button_selection"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:flow_horizontalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pincodeET" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/profileSubmitBT"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+    </FrameLayout>
+</layout>

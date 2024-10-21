@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/editphoneNumberTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="Your confirmation code is below — enter it  and we'll help you get signed in."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:fontFamily="@font/montserrat_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pin1ET"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="0"
+            android:singleLine="true"
+            android:textColorHint="@color/colorTextHintDefault"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_medium"
+            android:maxLength="10"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/mobile_number_button_selection"
+            app:layout_constraintTop_toBottomOf="@+id/editphoneNumberTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pin2ET"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/pin1ET"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:hint="0"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:padding="@dimen/_10sdp"
+            android:textColorHint="@color/colorTextHintDefault"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_medium"
+            android:background="@drawable/mobile_number_button_selection"
+
+            app:layout_constraintTop_toBottomOf="@+id/editphoneNumberTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pin3ET"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:hint="0"
+            android:singleLine="true"
+            android:textColorHint="@color/colorTextHintDefault"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_medium"
+            android:maxLength="10"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintRight_toLeftOf="@+id/pin4ET"
+            app:layout_constraintLeft_toRightOf="@+id/pin2ET"
+            android:background="@drawable/mobile_number_button_selection"
+            app:layout_constraintTop_toBottomOf="@+id/editphoneNumberTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pin4ET"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:hint="0"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:padding="@dimen/_10sdp"
+            android:textColorHint="@color/colorTextHintDefault"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_medium"
+            android:background="@drawable/mobile_number_button_selection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editphoneNumberTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/okOTPBT"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/welcome_button_selection"
+            android:gravity="center"
+            android:text="@string/OK"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pin4ET"
+            app:layout_constraintVertical_bias="0.0" />
+  <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/DismissOTPBT"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/welcome_button_selection"
+            android:gravity="center"
+            android:text="@string/dismiss"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/pin4ET"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

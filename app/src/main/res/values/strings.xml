@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">EclipticonGovindTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cricket_itle">Cricket</string>
+    <string name="splash_description">Cricket is one of the oldest games in the world</string>
+    <string name="getstarted">Get Started</string>
+    <string name="enter_you_number">Enter your mobile number</string>
+    <string name="hello_welcome_back_to_Our_account">Hello, Welcome Back to Our Account</string>
+    <string name="requestotp">Request OTP</string>
+    <string name="submit">Submit</string>
+    <string name="facebook">FaceBook</string>
+    <string name="google">Google</string>
+    <string name="term_and_condition"><![CDATA[By creating passcode you agree with our \n Terms & Conditions and Privacy Policy]]></string>
+    <string name="enter_your_verification_code">Enter your Verification code</string>
+    <string name="we_have_sent_the_code_verification_to_your_mobile_number">We Have sent the code verification to your mobile number</string>
+    <string name="mobileNumber">9988553322</string>
+    <string name="create_profile">Create profile</string>
+    <string name="firstname">FirstName</string>
+    <string name="lastname">LastName</string>
+    <string name="pick_location">Pick Your Current Location</string>
+    <string name="or">Or</string>
+    <string name="post_code">Post Code</string>
+    <string name="OK">OK</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="phone">Phone Number</string>
+    <string name="my_matches">My Matches</string>
+    <string name="edit_profile">EDIT PROFILE</string>
+</resources>

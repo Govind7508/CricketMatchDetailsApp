@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ViewPager2 for Ads -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/adsVP"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingStart="@dimen/_25sdp"
+        android:paddingEnd="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_20sdp" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ledgeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Indian T20 League"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_10sdp" />
+    <!-- ViewPager2 for Ledge Matches -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/ledgeVP"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_10sdp" />
+
+    <!-- TextView for Upcoming Matches -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/upcomomingTV"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Upcoming Matches"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_10sdp" />
+
+    <!-- RecyclerView for Upcoming Matches -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/upcomingRCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/upcoming_match_card_layout"
+        android:layout_marginTop="@dimen/_10sdp" />
+
+</LinearLayout>

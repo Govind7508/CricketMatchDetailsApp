@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dashboard_background_gradient"
+        tools:context=".home.ui.HomeActivity">
+
+        <RelativeLayout
+            android:id="@+id/topNav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/top_navigation_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView2"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/menu_line" />
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@+id/appCompatImageView"
+                android:layout_toEndOf="@+id/appCompatImageView2"
+                android:fontFamily="@font/montserrat_extrabold"
+                android:gravity="center"
+                android:text="HOME"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:gravity="center"
+                android:background="@drawable/balance_status_background"
+                android:layout_toStartOf="@+id/appCompatImageView">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:text="10000"
+                    android:id="@+id/balance"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunito_extrabold"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/wallet"
+                    android:layout_marginStart="10dp"
+                    android:padding="@dimen/_2sdp"/>
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/bell" />
+        </RelativeLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topNav"
+            app:layout_constraintBottom_toTopOf="@+id/bottomView"
+            app:navGraph="@navigation/nav_home" />
+
+        <View
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:background="@color/color_background"
+            android:layout_height="@dimen/_70sdp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/bottom_navigation_background"
+            android:backgroundTint="@color/gradientblue"
+            app:itemIconTint="@color/gradientblue"
+            app:itemTextColor="@color/black"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_navigation_menu" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
